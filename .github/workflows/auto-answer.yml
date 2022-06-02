@@ -1,0 +1,35 @@
+name: rymcu Auto Answer
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: "0 8 * * *" 
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install requirements
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: answer
+      run: |
+        python ./main.py
+      env:
+        login_url: ${{ secrets.LOGIN_URL }}
+        today_url: ${{ secrets.TODAY_URL }}
+        show_answer_url: ${{ secrets.SHOW_ANSWER_URL }}
+        answer_url: ${{ secrets.ANSWER_URL }}
+        account: ${{ secrets.ACCOUNT }}
+        pw: ${{ secrets.PW }}
