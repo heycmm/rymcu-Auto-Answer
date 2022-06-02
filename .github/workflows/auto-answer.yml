@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: 0 0 8 * * ?  
+    - cron: "0 8 * * *" 
 
 jobs:
   build:
@@ -27,9 +27,9 @@ jobs:
       run: |
         python ./main.py
       env:
-        login_url: ${{ secrets.login_url }}
-        today_url: ${{ secrets.today_url }}
-        show_answer_url: ${{ secrets.show_answer_url }}
-        answer_url: ${{ secrets.answer_url }}
-        account: ${{ secrets.account }}
-        pw: ${{ secrets.pw }}
+        login_url: ${{ secrets.LOGIN_URL }}
+        today_url: ${{ secrets.TODAY_URL }}
+        show_answer_url: ${{ secrets.SHOW_ANSWER_URL }}
+        answer_url: ${{ secrets.ANSWER_URL }}
+        account: ${{ secrets.ACCOUNT }}
+        pw: ${{ secrets.PW }}
