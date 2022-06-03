@@ -27,9 +27,5 @@ jobs:
       run: |
         python ./main.py
       env:
-        login_url: ${{ secrets.LOGIN_URL }}
-        today_url: ${{ secrets.TODAY_URL }}
-        show_answer_url: ${{ secrets.SHOW_ANSWER_URL }}
-        answer_url: ${{ secrets.ANSWER_URL }}
         account: ${{ secrets.ACCOUNT }}
         pw: ${{ secrets.PW }}

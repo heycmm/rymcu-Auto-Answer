@@ -7,12 +7,12 @@ headers = {
     'content-type': 'application/json;charset=UTF-8',
 }
 # 登录 post
-login_url = os.environ['login_url']
+login_url = 'https://rymcu.com/api/console/login'
 # 每日一题 get
-today_url = os.environ['today_url']
+today_url = 'https://rymcu.com/api/answer/today'
 # 查询答案 get
-show_answer_url = os.environ['show_answer_url']
+show_answer_url = 'http://1.116.175.112:8089/question/show-answer/%s'
 # 答题 post
-answer_url = os.environ['answer_url']
+answer_url = 'https://rymcu.com/api/answer/answer'
 account = os.environ['account']
 pw = os.environ['pw']
