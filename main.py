@@ -1,13 +1,7 @@
 import json
 
 import requests
-from setting import login_url, today_url, show_answer_url, answer_url, account, pw
-
-headers = {
-    'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
-    'authorization': '',
-    'content-type': 'application/json;charset=UTF-8',
-}
+from setting import headers, login_url, today_url, show_answer_url, answer_url, account, pw
 
 
 def auto_answer():
