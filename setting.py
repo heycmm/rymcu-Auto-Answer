@@ -7,7 +7,7 @@ headers = {
     'content-type': 'application/json;charset=UTF-8',
 }
 # 登录 post
-login_url = 'https://rymcu.com/api/console/login'
+login_url = 'https://rymcu.com/api/v1/auth/login'
 # 每日一题 get
 today_url = 'https://rymcu.com/api/answer/today'
 # 查询答案 get
