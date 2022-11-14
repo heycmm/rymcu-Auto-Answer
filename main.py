@@ -14,7 +14,7 @@ def auto_answer():
     login_data = {"account": account, "password": pw}
     user = r.post(login_url, headers=headers, data=json.dumps(login_data)).json()
     if user['code'] == 0:
-        headers['authorization'] = user['data']['user']['token']
+        headers['authorization'] = user['data']['token']
         today = r.get(today_url, headers=headers).json()
         if today['code'] == 0:
             answer_id = today['data']['answerRecords'][0]['id']
