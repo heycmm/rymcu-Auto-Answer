@@ -11,7 +11,7 @@ login_url = 'https://rymcu.com/api/auth/login'
 # 每日一题 get
 today_url = 'https://rymcu.com/api/answer/today'
 # 查询答案 get
-show_answer_url = 'http://1.116.175.112:8089/question/show-answer/%s'
+show_answer_url = 'https://test.rymcu.com/subject/question/show-answer/%s'
 # 答题 post
 answer_url = 'https://rymcu.com/api/answer/answer'
 account = os.environ['account']
